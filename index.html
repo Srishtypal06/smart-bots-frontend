@@ -8,6 +8,9 @@
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
     <link href="assets/css/loader.css" rel="stylesheet" type="text/css" />
     <script src="assets/js/loader.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dsa-sdk@v1.3.20/build/dsa.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -635,7 +638,7 @@
                         <p class="value">$ 45,141</p> 
                         <h6 class="">A/C Summary</h6>
                     </div>
-                    <div class=""></div>
+                    <div class="" id= "account"></div>
                       
                 </div>
                 <div class="progress">
@@ -716,16 +719,14 @@
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-2 col-sm-2 col-4 layout-spacing">
                             <div class="widget widget-activity-four">
-                                    <div class="widget-heading">
-                                            <h5 class="">Account</h5>
-                                        </div>
+                                    
                     <div class="layout-px-spacing">
                         <html>
                            <head>
                            <meta name="viewport" content="width=device-width, initial-scale=1">
                            <style>
                            .button {
-                             padding: 5px 15px;
+                             padding: 10px 20px;
                              font-size: 20px;
                              text-align: center;
                              cursor: pointer;
@@ -747,50 +748,65 @@
                            </style>
                            </head>
                            <body>
+                            
+                            <div class= "panel-body text-center">
+
+                                    <button class="button" id="deposit">Deposit</button>
+                                    <button class="button" id= "withdraw">Withdraw</button>
+                                    <button class="button" id= "trade">Trade</button>
+                                    <br></br>
+
+
+                        </div>
+                             <div class="panel-body text-center">
+                                <h5 class="">Account</h5>
+                                 <input type="text" class="form-control" id="username" placeholder="address" /><br>
+                            
+                            
+                       </div>
+                             
+                              <div class= "panel-body text-center">
+                                  <button class="button">Allowance</button>
+                                  <br></br>
+                                </div>
+
+                                <div class="col-xl-5 col-lg-6 col-md-2 col-sm-2 col-2 layout-spacing" style= "display:inline-block">
+                                        <div class="widget widget-activity-four">
+                                           <div class= "widget-heading text-center">
+                                               <h5 class="">Makerdao</h5>
+                                            </div>
+                                        <div class="widget-heading">
+                                            <h6 class="">Interest Rate</h6>
+                                            <div class= "" id="userinterest rate" placeholder="rate" ><br></div>
+                                        </div>
+                                        <div class="widget-heading">
+                                                <h6 class="">Supply Rate</h6><br>
+                                            </div>
+                            </div>
+                        </div>
+                              <div class="col-xl-5 col-lg-6 col-md-2 col-sm-2 col-2 layout-spacing" style="display: inline-block">
+                                <div class="widget widget-activity-four">
+                                   <div class= "widget-heading text-center">
+                                       <h5 class="">Compound</h5>
+                                    </div>
+                                    <div class="widget-heading">
+                                            <h6 class="">Interest Rate</h6>
+                                            <div class= "" id="userinterest rate" placeholder="rate" ><br></div>
+                                        </div>
+                                        <div class="widget-heading">
+                                                <h6 class="">Supply Rate</h6><br>
+                                            </div>
                            
-                           <button class="button">Deposit</button>
-                           <button class="button">Withdraw</button>
-                           <br></br>
-                           
-                           </body>
-                           </html>
-                   
-                           <html>
-                           <head>
-                           <meta name="viewport" content="width=device-width, initial-scale=1">
-                           <style>
-                           .button {
-                             padding: 5px 15px;
-                             font-size: 20px;
-                             text-align: center;
-                             cursor: pointer;
-                             outline: none;
-                             color: #fff;
-                             background-color: #4CAF50;
-                             border: none;
-                             border-radius: 15px;
-                             box-shadow: 0 9px #999;
-                           }
-                           
-                           .button:hover {background-color: #3e8e41}
-                           
-                           .button:active {
-                             background-color: #3e8e41;
-                             box-shadow: 0 5px #666;
-                             transform: translateY(4px);
-                           }
-                           </style>
-                           </head>
-                           <body>
-                           
-                           <button class="button">Trade</button>
-                           
-                           </body>
-                           </html>
-                           </div>
                     </div>
                 </div>
-                      
+
+                           </body>
+                           </html>
+
+                                                    
+                        </div>
+            </div>
+            </div>
 
 
                  <div class="col-xl-3 col-lg-2 col-md-2 col-sm-2 col-4 layout-spacing">
